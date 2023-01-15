@@ -1,22 +1,37 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>NextJS Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Learn <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
         </p>
+
+        Regular Navigation <a href='posts/first-post'>First Post</a>
+        Single App Navigation<Link href='posts/first-post'>First Post</Link>
+
+
+        <img src="/images/profile.jpeg" alt="Your Name" />
+
+        <Image
+          src="/images/profile.jpeg" // Route of the image file
+          height={144} // Desired size with correct aspect ratio
+          width={144} // Desired size with correct aspect ratio
+          alt="Your Name"
+        />
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
